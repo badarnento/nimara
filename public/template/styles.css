@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: white;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+}
+
+.back-button {
+    padding: 16px;
+}
+
+.back-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.back-button i {
+    font-size: 18px;
+    color: #374151;
+}
+
+.welcome-text {
+    text-align: center;
+    padding: 0 16px;
+    margin-bottom: 24px;
+}
+
+.welcome-text h1, .welcome-text h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    flex: 1;
+}
+
+.menu-item {
+    border-top: 1px solid #e5e7eb;
+}
+
+.menu-item a {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: #111827;
+    transition: background-color 0.2s;
+}
+
+.menu-item a:hover {
+    background-color: #f9fafb;
+}
+
+.menu-item.active a {
+    background-color: #f3f4f6;
+}
+
+.menu-item i {
+    font-size: 18px;
+    width: 24px;
+    color: #111827;
+}
+
+.menu-item span {
+    margin-left: 16px;
+    font-weight: 500;
+}
+
+.footer {
+    padding: 16px;
+    text-align: center;
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: auto;
+}
+
+.footer p:last-child {
+    margin-top: 4px;
+}
+
+.content {
+    margin-left: 280px;
+    padding: 24px;
+    flex: 1;
+}
+
+.content h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.content p {
+    margin-top: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .content {
+        margin-left: 0;
+    }
+    
+    /* Add a menu toggle button for mobile */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        z-index: 101;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 4px;
+        padding: 8px;
+        cursor: pointer;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 280px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    height: 100vh;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+/* Main Content Styles */
+.main-content {
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+header {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.logo {
+    height: 30px;
+    object-fit: contain;
+}
+
+.search-container {
+    padding: 15px;
+    background-color: white;
+}
+
+.search-box {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    border: none;
+    background: none;
+    flex: 1;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Carousel Styles */
+.swiper {
+    width: 100%;
+    padding: 15px;
+}
+
+.promo-card {
+    background-color: #1e3a8a;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    position: relative;
+}
+
+.promo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.promo-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+}
+
+.discount {
+    background-color: #fbbf24;
+    color: #1e3a8a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.order-now {
+    background-color: white;
+    color: #1e3a8a;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Theme Menu Styles */
+.tema-menu {
+    padding: 15px;
+}
+
+.theme-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.theme-card {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Menu Categories Styles */
+.menu-categories {
+    padding: 15px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.menu-card h4 {
+    padding: 12px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Promo Banner Styles */
+.promo-banner {
+    margin: 15px;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.promo-banner button {
+    background-color: #fbbf24;
+    color: #1e3a8a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Section Headers */
+h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Overlay when sidebar is open */
+body.sidebar-open::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}

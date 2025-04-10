@@ -13,22 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/coba', function () {
+    return view('coba');
+})->name('coba');
 
-use Illuminate\Http\Request;
-
-$pages = [
-    'home',
-    'about',
-    'product',
-];
-
-Route::get('/{any?}', function (Request $request, $any = null) {
-    $page = $any ?: 'home'; // Default ke 'home' jika $any kosong
-
-    if ($request->ajax()) {
-        return view("pages.$page"); // Pastikan hanya "pages.home" atau "pages.about"
-    }
-
-    return view('spa', ['page' => $page]); // Jangan pakai "pages." di sini
-})->where('any', implode("|",$pages));
-
+Route::get('/{any}', function () {
+    return view('main');
+})->where('any', '.*');

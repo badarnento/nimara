@@ -35,3 +35,9 @@
 .btn-primary {
   background: #1b409f !important;
 }
+
+.bg-white,
+.btn-white {
+  background: #fff !important;
+  color: #1b409f !important;
+}

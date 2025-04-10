@@ -1,0 +1,45 @@
+.spacer-10 {
+    height: 10px;
+}
+
+.spacer-20 {
+    height: 20px;
+}
+
+.spacer-30 {
+    height: 30px;
+}
+
+.spacer-40 {
+    height: 40px;
+}
+
+.spacer-50 {
+    height: 50px;
+}
+
+.deals img {
+    padding: 10px;
+}
+
+.rounded-4 {
+    border-radius: 1rem;
+}
+
+.rounded-pill {
+    border-radius: 50rem;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.text-end {
+    text-align: right;
+}
+
+.g-3>[class*='col-'] {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-bottom: 1rem;
+}
